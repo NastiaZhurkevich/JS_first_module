@@ -13,7 +13,47 @@ console.log(objArray.b);
 console.log(objArray['b']);
 console.log(objArray[b]);// - не работает, думает, что мы к какой-то переменной обращаемся
 */
+/*
+//!!!!!!условные операторы
+console.log(NaN || 2 || undefined); //выведет 2 - если все false, то выведет последний; если запнется на true - то выведет его.
+console.log(NaN && 2 && undefined);//выведет NaN - если все true, то выведет последний; если запнется на false - то выведет его.
+console.log(1 && 2 && 3);//выведет 3
+console.log(!1 && 2 || !3);//false: !1 && 2 = !1 -> !1 || !3 = !3 преобразует в логический -> false
+console.log(25 || null && !3); //25: null && !3 = null -> 25(true) || null = 25
+console.log(NaN || null || !3 || undefined || 5); //5
+console.log(NaN || null && !3 && undefined || 5); //5: null && !3 = null -> null && undefined = null -> NaN  || null || 5 = 5
+console.log(5 === 5 && 3 > 1 || 5);//5 === 5 && 3 > 1 = true -> true || 5 = true
 
+const hamburger = 3;
+const fries = 3;
+const cola = 0;
+const nuggets = 2;
+
+if (hamburger === 3 && cola || fries === 3 && nuggets) {
+	console.log('Done!')
+}
+console.log(hamburger === 3 && cola || fries === 3 && nuggets); // true && cola = cola -> true && nuggets = nuggets -> cola || nuggets = nuggets
+
+
+let hamburger;
+const fries = NaN;
+const cola = 0;
+const nuggets = 2;
+
+if (hamburger || cola || fries === 3 || nuggets) {
+	console.log('Done!')
+}
+
+let hamburger;
+const fries = NaN;
+const cola = 0;
+const nuggets = 2;
+
+if (hamburger && cola || fries === 3 && nuggets) {
+	console.log('Done!')
+}
+console.log(hamburger && cola || fries === 3 && nuggets); // hamburger && cola = hamburger -> fries === 3 && nuggets = false -> hamburger || false = false
+*/
 // CALLBACK
 /*
 function first(){

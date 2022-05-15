@@ -1,4 +1,5 @@
-//defferences objects and array
+//#region defferences objects and array
+
 // массив частный случай объекта - у него фиксированные ключи.
 /*
 const array = ["a", "b", "c"];
@@ -13,8 +14,12 @@ console.log(objArray.b);
 console.log(objArray['b']);
 console.log(objArray[b]);// - не работает, думает, что мы к какой-то переменной обращаемся
 */
+
+//#endregion
+
+//#region conditionals important
+
 /*
-//!!!!!!условные операторы
 console.log(NaN || 2 || undefined); //выведет 2 - если все false, то выведет последний; если запнется на true - то выведет его.
 console.log(NaN && 2 && undefined);//выведет NaN - если все true, то выведет последний; если запнется на false - то выведет его.
 console.log(1 && 2 && 3);//выведет 3
@@ -52,33 +57,36 @@ if (hamburger && cola || fries === 3 && nuggets) {
 	console.log('Done!')
 }
 console.log(hamburger && cola || fries === 3 && nuggets); // hamburger && cola = hamburger -> fries === 3 && nuggets = false -> hamburger || false = false
-*/ //Loop tasks 
+*/
+
+//#endregion
+
+//#region loops
+
 /*
 // Место для первой задачи
 function firstTask() {
-	let i = 5;
-	while (i <= 10) {
-		console.log(i);
-		i++;
-	}
+   let i = 5;
+   while (i <= 10) {
+	   console.log(i);
+	   i++;
+   }
 }
-
 // Место для второй задачи
 function secondTask() {
-	for (let i = 20; i >= 10; i--) {
-		if (i === 13) {
-			break;
-		}
-		console.log(i);
-	}
+   for (let i = 20; i >= 10; i--) {
+	   if (i === 13) {
+		   break;
+	   }
+	   console.log(i);
+   }
 }
-
 // Место для третьей задачи
 function thirdTask() {
-	for (let i = 2; i <= 10;) {
-		console.log(i);
-		i += 2;
-	}
+   for (let i = 2; i <= 10;) {
+	   console.log(i);
+	   i += 2;
+   }
 }
 // Место для четвертой задачи
 
@@ -91,41 +99,40 @@ function thirdTask() {
 //         console.log(i);
 //     }
 // }
-
 function fourthTask() {
-	let i = 2;
-	while (i <= 16) {
-		console.log(i);
-		i += 2;
-	}
+   let i = 2;
+   while (i <= 16) {
+	   console.log(i);
+	   i += 2;
+   }
 }
-
 fourthTask();
 // Место для пятой задачи
 function fifthTask() {
-	const arrayOfNumbers = [];
+   const arrayOfNumbers = [];
 
-	for (let i = 5; i <= 10; i++) {
-		arrayOfNumbers.push(i);
-	}
-	// Не трогаем
-	return arrayOfNumbers;
+   for (let i = 5; i <= 10; i++) {
+	   arrayOfNumbers.push(i);
+   }
+   // Не трогаем
+   return arrayOfNumbers;
 }
-
 const lines = 5;
 let result = '';
 for (let i = 0; i <= lines; i++) {
-	for (let j = 0; j < lines - i; j++) {
-		result += ' ';
-	}
+   for (let j = 0; j < lines - i; j++) {
+	   result += ' ';
+   }
 
-	for (let y = 0; y < i * 2 + 1; y++) {
-		result = result + '*';
-	}
-	result += '\n';
+   for (let y = 0; y < i * 2 + 1; y++) {
+	   result = result + '*';
+   }
+   result += '\n';
 }
 console.log(result);
 */
+
+//#endregion
 
 // CALLBACK
 /*

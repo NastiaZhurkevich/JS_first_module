@@ -133,6 +133,33 @@ console.log(result);
 */
 
 //#endregion
+//#region function tasks
+// Место для первой задачи
+// Место для первой задачи
+function calculateVolumeAndArea(param) {
+	if (!Number.isInteger(param) || param <= 0) {
+		return 'При вычислении произошла ошибка.';
+	}
+	let area = param * param;
+	return `Объeм куба: ${area * param}, площадь всей поверхности: ${area * 6}`;
+}
+// Место для второй задачи
+function getCoupeNumber(placeNumber) {
+	if (!Number.isInteger(placeNumber) || placeNumber < 0) {
+		console.log('Ошибка. Проверьте правильность введенного номера места');
+		return;
+
+	} else if (placeNumber === 0 || placeNumber > 36) {
+		console.log("Таких мест в вагоне не существует");
+		return;
+	}
+	console.log(Math.ceil(Math.round(placeNumber / 4)));
+}
+
+//#endregion
+
+
+//#endregion
 
 // CALLBACK
 /*
@@ -295,6 +322,7 @@ const john = Object.create(solder);
 john.sayHello();
 */
 //DYNAMIC TYPING
+
 // ЗАМЫКАНИЕ - в момент создания функции она носит с собой рюкзак с областью видимостью и переменными
 /*function createCounter() {
 	  let counter = 0

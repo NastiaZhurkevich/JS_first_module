@@ -1,7 +1,6 @@
 //#region defferences objects and array
 
-// массив частный случай объекта - у него фиксированные ключи.
-/*
+/*// массив частный случай объекта - у него фиксированные ключи.
 const array = ["a", "b", "c"];
 const objArray = {
 	'z': "a",
@@ -12,15 +11,13 @@ objArray['b'] = "d";
 console.log(objArray);
 console.log(objArray.b);
 console.log(objArray['b']);
-console.log(objArray[b]);// - не работает, думает, что мы к какой-то переменной обращаемся
-*/
+console.log(objArray[b]);// - не работает, думает, что мы к какой-то переменной обращаемся*/
 
 //#endregion
 
-//#region conditionals important
+//#region conditionals !important
 
-/*
-console.log(NaN || 2 || undefined); //выведет 2 - если все false, то выведет последний; если запнется на true - то выведет его.
+/*console.log(NaN || 2 || undefined); //выведет 2 - если все false, то выведет последний; если запнется на true - то выведет его.
 console.log(NaN && 2 && undefined);//выведет NaN - если все true, то выведет последний; если запнется на false - то выведет его.
 console.log(1 && 2 && 3);//выведет 3
 console.log(!1 && 2 || !3);//false: !1 && 2 = !1 -> !1 || !3 = !3 преобразует в логический -> false
@@ -56,23 +53,20 @@ const nuggets = 2;
 if (hamburger && cola || fries === 3 && nuggets) {
 	console.log('Done!')
 }
-console.log(hamburger && cola || fries === 3 && nuggets); // hamburger && cola = hamburger -> fries === 3 && nuggets = false -> hamburger || false = false
-*/
+console.log(hamburger && cola || fries === 3 && nuggets); // hamburger && cola = hamburger -> fries === 3 &&
+	nuggets = false -> hamburger || false = false*/
 
 //#endregion
 
 //#region loops
 
-/*
-// Место для первой задачи
-function firstTask() {
+/*function firstTask() {
    let i = 5;
    while (i <= 10) {
 	   console.log(i);
 	   i++;
    }
 }
-// Место для второй задачи
 function secondTask() {
    for (let i = 20; i >= 10; i--) {
 	   if (i === 13) {
@@ -81,7 +75,6 @@ function secondTask() {
 	   console.log(i);
    }
 }
-// Место для третьей задачи
 function thirdTask() {
    for (let i = 2; i <= 10;) {
 	   console.log(i);
@@ -107,7 +100,6 @@ function fourthTask() {
    }
 }
 fourthTask();
-// Место для пятой задачи
 function fifthTask() {
    const arrayOfNumbers = [];
 
@@ -129,14 +121,13 @@ for (let i = 0; i <= lines; i++) {
    }
    result += '\n';
 }
-console.log(result);
-*/
+console.log(result);*/
 
 //#endregion
 
 //#region function tasks
-/*
-function calculateVolumeAndArea(param) {
+
+/*function calculateVolumeAndArea(param) {
 	if (!Number.isInteger(param) || param <= 0) {
 		return 'При вычислении произошла ошибка.';
 	}
@@ -155,9 +146,6 @@ function getCoupeNumber(placeNumber) {
 	}
 	console.log(Math.ceil(Math.round(placeNumber / 4)));
 }
-*/
-/*
-// Место для первой задачи
 function getTimeFromMinutes(allTimeInMinutes) {
 	if (Number.isInteger(allTimeInMinutes) && allTimeInMinutes >= 0 && allTimeInMinutes <= 600) {
 		let hours = Math.floor(allTimeInMinutes / 60);
@@ -181,10 +169,7 @@ function getTimeFromMinutes(allTimeInMinutes) {
 	}
 	console.log('Ошибка, проверьте данные');
 }
-//getTimeFromMinutes(500);
-
-
-// Место для второй задачи
+getTimeFromMinutes(500);
 function findMaxNumber(a, b, c, d) {
 	if (typeof a != 'number' || typeof b != 'number' ||
 		typeof c != 'number' || typeof d != 'number') {
@@ -198,7 +183,6 @@ function findMaxNumber(a, b, c, d) {
 		}
 	}
 	return maxNumber;
-
 }
 findMaxNumber(1, 3, 6);
 findMaxNumber(6, 83, 9, 5);
@@ -224,13 +208,12 @@ function fib(num) {
 fib(0);
 fib(1);
 fib(5);
-fib(8);
-*/
+fib(8);*/
+
 //#endregion
 
 //#region callbak
-/*
-function first(){
+/*function first(){
 	setTimeout(() =>console.log("1"), 500);
 }
 function second (){
@@ -246,14 +229,13 @@ function learnJS (lang, callback){
 function done(){
 	console.log(' Япрошел этот урок')
 }
-learnJS("JS", done); //в коллбек передаем просто название, без скобок
-*/
+learnJS("JS", done); //в коллбек передаем просто название, без скобок */
 
 //#endregion
 
-//OBJECTS
-/*
-const options = {
+//#region objects
+
+/*const options = {
 	name: 'test',
 	width: 1024,
 	height: 1024,
@@ -286,9 +268,12 @@ options.makeTest();
 const {border, bg} = options.colors;  //ДЕСТРУКТАРИЗАЦИЯ - взятие из объекта объектов в отдельные перемнные
 console.log(border)
 console.log(bg);
-console.log(options);
-*/
-//ARRAY
+console.log(options);*/
+
+//#endregion
+
+//#region array
+
 /*const arr = [1,2,3,4,5,6];
 arr.pop();
 console.log(arr);
@@ -303,7 +288,11 @@ for(let value of arr) { // for (..of...) - перебор только стру�
 arr.forEach(function(item, index, arr){ // нельзя использовать break, continue
 	console.log(item, index, arr);
 });*/
-// TRANSFER BY REFERENCE AND VALUE, COPY OBJECTS AND ARRAY
+
+//#endregion
+
+//#region difference between reference and  value, copy objects and array
+
 /*const obj = {
 	a:5,
 	b:1
@@ -369,9 +358,12 @@ const q = {
 };
 const newOb = {...q};
 console.log(newOb);*/
-//OOP, PROTOTYPE
-/*
-let str = "some";
+
+//#endregion
+
+//#region OOP, prototype
+
+/*let str = "some";
 let strObj = new String(str);
 console.log(typeof(str))
 console.log(typeof (strObj));
@@ -389,9 +381,13 @@ const john = {
 john.__proto__ = solder;//указание ПРОТОТИПА - не используется!!!
 Object.setPrototypeOf(john, solder); - динамическая установка прототипа
 const john = Object.create(solder);
-john.sayHello();
-*/
-//DYNAMIC TYPING
+john.sayHello();*/
+
+//#endregion
+
+//#region dynamic typing
+
+//#endregion
 
 // ЗАМЫКАНИЕ - в момент создания функции она носит с собой рюкзак с областью видимостью и переменными
 /*function createCounter() {

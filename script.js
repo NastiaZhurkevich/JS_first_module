@@ -133,9 +133,9 @@ console.log(result);
 */
 
 //#endregion
+
 //#region function tasks
-// Место для первой задачи
-// Место для первой задачи
+/*
 function calculateVolumeAndArea(param) {
 	if (!Number.isInteger(param) || param <= 0) {
 		return 'При вычислении произошла ошибка.';
@@ -143,7 +143,7 @@ function calculateVolumeAndArea(param) {
 	let area = param * param;
 	return `Объeм куба: ${area * param}, площадь всей поверхности: ${area * 6}`;
 }
-// Место для второй задачи
+
 function getCoupeNumber(placeNumber) {
 	if (!Number.isInteger(placeNumber) || placeNumber < 0) {
 		console.log('Ошибка. Проверьте правильность введенного номера места');
@@ -155,13 +155,80 @@ function getCoupeNumber(placeNumber) {
 	}
 	console.log(Math.ceil(Math.round(placeNumber / 4)));
 }
+*/
+/*
+// Место для первой задачи
+function getTimeFromMinutes(allTimeInMinutes) {
+	if (Number.isInteger(allTimeInMinutes) && allTimeInMinutes >= 0 && allTimeInMinutes <= 600) {
+		let hours = Math.floor(allTimeInMinutes / 60);
+		let minutes = allTimeInMinutes % 60;
+		let houtsDesc, minutesDesc;
+		if (hours === 1) {
+			houtsDesc = 'час';
+		} else if (hours >= 2 && hours <= 4) {
+			houtsDesc = 'часа';
+		} else {
+			houtsDesc = 'часов';
+		}
+		if (minutes >= 1 && minutes <= 4 || minutes == 21 || minutes == 31 || minutes == 41 || minutes == 51) {
+			minutesDesc = 'минута';
+		} else if (minutes >= 22 && minutes <= 24 || minutes >= 32 && minutes <= 34 || minutes >= 42 && minutes <= 44 || minutes >= 52 && minutes <= 54) {
+			minutesDesc = 'минуты';
+		} else {
+			minutesDesc = 'минут';
+		}
+		console.log(`Это ${hours} ${houtsDesc} и ${minutes} ${minutesDesc}`);
+	}
+	console.log('Ошибка, проверьте данные');
+}
+//getTimeFromMinutes(500);
 
+
+// Место для второй задачи
+function findMaxNumber(a, b, c, d) {
+	if (typeof a != 'number' || typeof b != 'number' ||
+		typeof c != 'number' || typeof d != 'number') {
+		return 0;
+	}
+	let arrayNumber = [b, c, d];
+	let maxNumber = a;
+	for (let item in arrayNumber) {
+		if (arrayNumber[item] > maxNumber) {
+			maxNumber = arrayNumber[item];
+		}
+	}
+	return maxNumber;
+
+}
+findMaxNumber(1, 3, 6);
+findMaxNumber(6, 83, 9, 5);
+
+function fib(num) {
+	if (typeof num != 'number')
+		return '';
+	let previousLastNum = 0, lastNum = 1;
+	if (num === 0) {
+		return "0";
+	} else if (num === 1) {
+		return "0 1";
+	}
+	let result = [previousLastNum, lastNum];
+	for (let i = 2; i < num; i++) {
+		result[i] = previousLastNum + lastNum;
+		previousLastNum = lastNum;
+		lastNum = result[i];
+	}
+	return result.join(", ");
+
+}
+fib(0);
+fib(1);
+fib(5);
+fib(8);
+*/
 //#endregion
 
-
-//#endregion
-
-// CALLBACK
+//#region callbak
 /*
 function first(){
 	setTimeout(() =>console.log("1"), 500);
@@ -181,6 +248,9 @@ function done(){
 }
 learnJS("JS", done); //в коллбек передаем просто название, без скобок
 */
+
+//#endregion
+
 //OBJECTS
 /*
 const options = {
@@ -196,10 +266,10 @@ const options = {
 	}
 };
 console.log(options.name);
-delete options.name;
+delete options.name; // удаление свойства!!!
 console.log(options);
 let counter = 0;
-for(let key in options){ // перебор свойств объектов
+for(let key in options){ // перебор свойств объектов  !!! for ... of не работает с объектами !!!
 	if(typeof options[key] === 'object'){
 		for(let i in options[key]){
 			console.log(`Свойство ${[i]} имеет значение ${options[key][i]}`);
